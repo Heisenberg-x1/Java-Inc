@@ -1,11 +1,13 @@
 import java.lang.reflect.Type;
+import java.util.function.Function;
 
 public class Tasks {
     public static void main(String[] args) {
         System.out.print("\033[H\033[2J");
         System.out.flush();
 
-        // (i) Create a program similar to the previous one, but this time the name of
+        // TODO: (i)Create a program similar to the previous one, but this time the name
+        // of
         // the user should be provided as the first command-line argument. Printing to
         // the standard output is also possible using the following command, which Java
         // programmers usually prefer
@@ -17,15 +19,108 @@ public class Tasks {
          * }
          */
 
-        // (ii)The program below should print the half of the numbers 1, 2, 3 and 4.
+        // TODO: (ii)Create a program which inputs two integer numbers, and for each
+        // integer number in the range defined by these two integers, it outputs the
+        // half of those numbers. To convert a string (provided as input) into an intege
+        // number, you can use the following conversion function
         /*
-         * TODO: int i;
+         * int i;
          * for( i=1;i<=4;i++){
          * System.out.println((i/2.0));
          * }
          * i =4;
          * System.out.println("Altogether " + i + " numbers are printed out");
          */
+
+        // TODO: (iii)Create a program which inputs two integer numbers, and for each
+        // integer number in the range defined by these two integers, it outputs the
+        // half of those numbers. To convert a string (provided as input) into an
+        // integer number, you can use the following conversion function:
+        /*
+         * System.out.println("Enter num 1: ");
+         * int num1 = Integer.parseInt(System.console().readLine());
+         * System.out.println("Enter num 2: ");
+         * int num2 = Integer.parseInt(System.console().readLine());
+         * if(num1 > num2){
+         * for(int i=num2;i<=num1;i++){
+         * System.out.println(i/2.0);
+         * }
+         * }
+         */
+
+        // TODO: (iv)Create a program which converts its first two command-line
+        // arguments into integer numbers, and computes their sum, difference, product,
+        // as well as the quotient and remainder of integer division. The integer
+        // division should not be performed when the second number is zero. The results
+        // should be printed on the standard output. The program should print an error
+        // message if less than two command-line arguments were provided. The error
+        // message should be printed on the standard error (System.err) stream.
+
+        /*
+         * if (args.length != 2) {
+         * System.err.println("Invalid args count!!");
+         * } else {
+         * System.out.println("Sum of the args is: " + (Integer.parseInt(args[0]) +
+         * Integer.parseInt(args[1])));
+         * System.out.println("Product of the args is: " + (Integer.parseInt(args[0]) *
+         * Integer.parseInt(args[1])));
+         * if (Integer.parseInt(args[0]) > Integer.parseInt(args[1])) {
+         * System.out.println("Difference: " + (Integer.parseInt(args[0]) -
+         * Integer.parseInt(args[1])));
+         * 
+         * } else {
+         * System.out.println("Difference: " + (Integer.parseInt(args[1]) -
+         * Integer.parseInt(args[0])));
+         * 
+         * }
+         * if (Integer.parseInt(args[0]) != 0 && Integer.parseInt(args[1]) != 0) {
+         * 
+         * System.out.println("Quotient: " + (Float.parseFloat(args[1]) /
+         * Float.parseFloat(args[0])));
+         * }
+         * 
+         * }
+         */
+
+        // TODO: (v)Implement a program which computes the factorial of a given natural
+        // number.
         
+            /*
+             * int n = Integer.parseInt(System.console().readLine());
+        int fac = 1;
+        for (int i = 1; i <= n; i++) {
+            fac *= i;
+        }
+        System.out.print("Factorial of " + n + " is " + fac);
+             */
+             
+        // TODO: Create a program which takes its first command-line argument as an integer number, and decides whether this number is a perfect number. In number theory, a natural number is called perfect, if the sum of its positive divisors (excluding the number itself) is equal to the number. (Or, equivalently, the sum of the positive divisors equals to two times the number.) The first four perfect numbers are: 6, 28, 496 and 8128.
+
+        /*
+         * int n = Integer.parseInt(args[0]);
+        int sumDiv = 0;
+        for(int i=1;i<n;i++){
+            if(n%i == 0){
+                sumDiv+=i;
+            }
+        }
+        if(sumDiv==n){
+            System.out.println("Number is perfect!!");
+        } else{
+            System.out.println("Number not perfect!!");
+        }
+         */
+
+       //TODO:(vi)Change the previous program in such a way that it computes how many perfect numbers are in the range between 1 and the number given as the first command-line argument
+       int n = Integer.parseInt(args[0]);
+       int sumDiv = 0;
+       for(int i=1;i<n;i++){
+        if(n%i == 0){
+            sumDiv+=i;
+        }
     }
+
+
+    }
+
 }

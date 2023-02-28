@@ -1,4 +1,4 @@
-class Code {
+class Code{
     public static void main (String[] args){
          // FIXME: Declaring floats
          float x = 34.5f;
@@ -13,10 +13,12 @@ class Code {
          }
  
          //?Another way to write an if else statement is by using a one liner with the ? operator as follows
+
          int num = 10;
          int num2 = 10>12 ? 12:10;
          System.out.println(num2);
- 
+
+         
          //TODO:ARRAYS
          //?We can create an array in java as follows
          int[] arr = new int[10];
@@ -24,6 +26,7 @@ class Code {
          System.out.println("The length of the array is " + arr.length );
          //we can also create an array by defining the array values
          int[] arr2 = {12,34,45,5,24,56};
+         
          for(int i = 0;i<arr2.length;i++){
              System.out.println(arr2[i]);
          }
