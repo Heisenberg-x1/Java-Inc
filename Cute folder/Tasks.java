@@ -1,5 +1,4 @@
-import java.lang.reflect.Type;
-import java.util.function.Function;
+import java.util.Arrays;
 
 public class Tasks {
     public static void main(String[] args) {
@@ -84,42 +83,68 @@ public class Tasks {
 
         // TODO: (v)Implement a program which computes the factorial of a given natural
         // number.
-        
-            /*
-             * int n = Integer.parseInt(System.console().readLine());
-        int fac = 1;
-        for (int i = 1; i <= n; i++) {
-            fac *= i;
-        }
-        System.out.print("Factorial of " + n + " is " + fac);
-             */
-             
-        // TODO: Create a program which takes its first command-line argument as an integer number, and decides whether this number is a perfect number. In number theory, a natural number is called perfect, if the sum of its positive divisors (excluding the number itself) is equal to the number. (Or, equivalently, the sum of the positive divisors equals to two times the number.) The first four perfect numbers are: 6, 28, 496 and 8128.
+
+        /*
+         * int n = Integer.parseInt(System.console().readLine());
+         * int fac = 1;
+         * for (int i = 1; i <= n; i++) {
+         * fac *= i;
+         * }
+         * System.out.print("Factorial of " + n + " is " + fac);
+         */
+
+        // TODO: Create a program which takes its first command-line argument as an
+        // integer number, and decides whether this number is a perfect number. In
+        // number theory, a natural number is called perfect, if the sum of its positive
+        // divisors (excluding the number itself) is equal to the number. (Or,
+        // equivalently, the sum of the positive divisors equals to two times the
+        // number.) The first four perfect numbers are: 6, 28, 496 and 8128.
 
         /*
          * int n = Integer.parseInt(args[0]);
-        int sumDiv = 0;
-        for(int i=1;i<n;i++){
-            if(n%i == 0){
-                sumDiv+=i;
-            }
-        }
-        if(sumDiv==n){
-            System.out.println("Number is perfect!!");
-        } else{
-            System.out.println("Number not perfect!!");
-        }
+         * int sumDiv = 0;
+         * for(int i=1;i<n;i++){
+         * if(n%i == 0){
+         * sumDiv+=i;
+         * }
+         * }
+         * if(sumDiv==n){
+         * System.out.println("Number is perfect!!");
+         * } else{
+         * System.out.println("Number not perfect!!");
+         * }
          */
 
-       //TODO:(vi)Change the previous program in such a way that it computes how many perfect numbers are in the range between 1 and the number given as the first command-line argument
-       int n = Integer.parseInt(args[0]);
-       int sumDiv = 0;
-       for(int i=1;i<n;i++){
-        if(n%i == 0){
-            sumDiv+=i;
-        }
-    }
+        // TODO:(vi)Change the previous program in such a way that it computes how many
+        // perfect numbers are in the range between 1 and the number given as the first
+        // command-line argument
 
+        // TODO:(vii)Compute the greatest common divisor of the (positive or negative)
+        // integer numbers provided as command-line arguments. Your program should
+        // convert all of its command-line arguments into integer numbers, and compute
+        // their greatest common divisors.The command-line arguments and the result
+        // should be represented with long values. This type is a 64-bits signed integer
+        // type. To convert a string to this type, use the Long.parseLong(...) function
+        long[] arr = new long[args.length];
+        for (int i = 0; i < args.length; i++) {
+            arr[i] = Long.parseLong(args[i]);
+        }
+        long min = Arrays.stream(arr).min().getAsLong();
+        long gcd = 0;
+        for (int i = 1; i < min; i++) {
+            int tempgcd = 0;
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[j] % i != 0) {
+                    continue;
+                } else {
+                    tempgcd = i;
+                }
+            }
+            if (tempgcd > gcd) {
+                gcd = tempgcd;
+            }
+        }
+        System.out.println(gcd);
 
     }
 
