@@ -1,4 +1,4 @@
-class Code{
+public class Code {
     public static void main (String[] args){
          // FIXME: Declaring floats
          float x = 34.5f;
@@ -26,7 +26,7 @@ class Code{
          System.out.println("The length of the array is " + arr.length );
          //we can also create an array by defining the array values
          int[] arr2 = {12,34,45,5,24,56};
-         
+
          for(int i = 0;i<arr2.length;i++){
              System.out.println(arr2[i]);
          }
@@ -36,13 +36,29 @@ class Code{
              System.out.println(i);
              i++;
          } while(i<4);
- 
+         
+         //TODO: SHORTS, INT AND LONG
+         short y = 12;
+         short z = 13;
+         byte e = 10;
+         //?In terms of size, byte(1),short(2), int(4) and finally long(8)
+         
+         //GCD
+         int first = Integer.parseInt(System.console().readLine("Enter the first number: "));
+         int second = Integer.parseInt(System.console().readLine("Enter the second number: "));
+         int gcd = 0;
+         if(first>second){
+            for(int k=1;k<=second;k++){
+                if(first%k == 0 && second%k == 0){
+                    gcd = k;
+                }
+            }
+         }
+         System.out.println("Gcd: " + gcd);
  
  
  
  
          System.out.println("\n");
- 
-         String number = "234";
     }
 }
