@@ -115,27 +115,22 @@ public class Tasks {
          * }
          */
 
-        // TODO:(vi)Change the previous program in such a way that it computes how many
-        // perfect numbers are in the range between 1 and the number given as the first
-        // command-line argument
+        // TODO:(vi)Change the previous program in such a way that it computes how manyperfect numbers are in the range between 1 and the number given as the firstcommand-line argument
 
-        // TODO:(vii)Compute the greatest common divisor of the (positive or negative)
-        // integer numbers provided as command-line arguments. Your program should
-        // convert all of its command-line arguments into integer numbers, and compute
-        // their greatest common divisors.The command-line arguments and the result
-        // should be represented with long values. This type is a 64-bits signed integer
-        // type. To convert a string to this type, use the Long.parseLong(...) function
-        long[] arr = new long[args.length];
+        // TODO:(vii)Compute the greatest common divisor of the (positive or negative)integer numbers provided as command-line arguments. Your program shouldconvert all of its command-line arguments into integer numbers, and computetheir greatest common divisors.The command-line arguments and the resultshould be represented with long values. This type is a 64-bits signed integertype. To convert a string to this type, use the Long.parseLong(...) function
+        /*
+         *long[] arr = new long[args.length];
         for (int i = 0; i < args.length; i++) {
             arr[i] = Long.parseLong(args[i]);
         }
         long min = Arrays.stream(arr).min().getAsLong();
         long gcd = 0;
-        for (int i = 1; i < min; i++) {
+        for (int i = 1; i <= min; i++) {
             int tempgcd = 0;
             for (int j = 0; j < arr.length; j++) {
                 if (arr[j] % i != 0) {
-                    continue;
+                    tempgcd = 0;
+                    break;
                 } else {
                     tempgcd = i;
                 }
@@ -145,6 +140,7 @@ public class Tasks {
             }
         }
         System.out.println(gcd);
+         */
 
     }
 
