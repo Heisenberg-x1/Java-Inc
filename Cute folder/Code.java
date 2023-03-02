@@ -1,4 +1,7 @@
 import java.util.Arrays;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
 public class Code {
     public static void main(String[] args) {
         // FIXME: Declaring floats
@@ -46,17 +49,56 @@ public class Code {
         // ?In terms of size, byte(1),short(2), int(4) and finally long(8)
 
         // GCD
-        int first = Integer.parseInt(System.console().readLine("Enter the first number: "));
-        int second = Integer.parseInt(System.console().readLine("Enter the second number: "));
-        int gcd = 0;
-        if (first > second) {
-            for (int k = 1; k <= second; k++) {
-                if (first % k == 0 && second % k == 0) {
-                    gcd = k;
-                }
-            }
-        }
-        System.out.println("Gcd: " + gcd);
+        /**
+         * int first = Integer.parseInt(System.console().readLine("Enter the first
+         * number: "));
+         * int second = Integer.parseInt(System.console().readLine("Enter the second
+         * number: "));
+         * int gcd = 0;
+         * if (first > second) {
+         * for (int k = 1; k <= second; k++) {
+         * if (first % k == 0 && second % k == 0) {
+         * gcd = k;
+         * }
+         * }
+         * } else{
+         * for(int k = 1; k <= first; k++){
+         * if (first % k == 0 && second % k == 0) {
+         * gcd = k;
+         * }
+         * }
+         * }
+         * System.out.println("Gcd: " + gcd);
+         */
+
+        // TODO: - creation of variables involves declaration and assigning a value.
+        // Combining the 2 is called initialisation. When creating long variables, we
+        // have to add L at the end for some reason.Likewise, when we create floats, we
+        // have to add f at the end. char are sorounded by a single quotation mark
+        // unlike Strings.
+        long number = 24342354234L;
+        float fl1 = 12.5f;
+        // TODO: Another way to get console inputs is by using scanner. We first need to
+        // import the scanner class.
+        /*
+         * 
+         * Scanner var = new Scanner(System.in);
+         * String name = var.nextLine();
+         * int num3 = var.nextInt();
+         * System.out.println(name + " " + num3);
+         */
+
+        // int age = Integer.parseInt(System.console().readLine("Enter your age: "));
+        // System.out.print(age);
+
+        //FIXME: GUI - Graphical User Interphase
+        String name = JOptionPane.showInputDialog("What is your name?");
+        int height = Integer.parseInt(JOptionPane.showInputDialog("What is your height?"));
+        JOptionPane.showMessageDialog(null,"Hello " + name + " You are " + height + " cm high");
+
+        //FIXME: MATH CLASS
+         
+
 
         System.out.println("\n");
     }
