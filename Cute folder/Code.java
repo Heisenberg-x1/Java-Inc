@@ -5,6 +5,9 @@ import java.util.Random; //!Enables us to access the random numbers
 
 public class Code {
     public static void main(String[] args) {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+
         // FIXME: Declaring floats
         float x = 34.5f;
         System.out.println(x);
@@ -111,12 +114,33 @@ public class Code {
 
          //FIXME: RANDOM NUMBERS
          //?First we need to create an instance of the random number(After importing the random class)
-         Random random = new Random();
+         Random random = new Random();//!creating a new instance of the rans=
          int r = random.nextInt(10); //?Here we are creating an instance of the random number. The parameter passed is the upper bound.
          double s = random.nextDouble(10.0);//?Random double
          Boolean t = random.nextBoolean();//?a random boolean value
 
          System.out.println(r + "\n" + s + "\n" + t);
+
+         //FIXME: SWITCH
+         int day = 3;
+         /*
+          * 
+          switch (day) {
+            case 0:
+                System.out.println("Line 1");
+                break;
+            case 1:
+                System.out.println("Line 2");
+                break;
+            case 2:
+                System.out.println("Line 3");
+                break;
+         
+            default:
+                System.out.println("Any line");
+                break;
+         }
+          */
 
 
 
