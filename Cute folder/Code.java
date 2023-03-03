@@ -1,6 +1,7 @@
-import java.util.Arrays;
+import java.util.Arrays; //!Array methods
 import java.util.Scanner;
-import javax.swing.JOptionPane;
+import javax.swing.JOptionPane; 
+import java.util.Random; //!Enables us to access the random numbers
 
 public class Code {
     public static void main(String[] args) {
@@ -92,12 +93,31 @@ public class Code {
         // System.out.print(age);
 
         //FIXME: GUI - Graphical User Interphase
+        /*
         String name = JOptionPane.showInputDialog("What is your name?");
         int height = Integer.parseInt(JOptionPane.showInputDialog("What is your height?"));
         JOptionPane.showMessageDialog(null,"Hello " + name + " You are " + height + " cm high");
+        */
 
         //FIXME: MATH CLASS
-         
+         x = 22222;
+         y = -2100;
+         System.out.println(Math.max(x,y)); // ?max of two numbers.Math.min() will give the minimum 
+         Math.abs(y); // ?will give us the absolute value of a number.in this case 2100
+         Math.sqrt(x);
+         Math.round(12.4); //?normal rounding off
+         Math.floor(12.7);//?Rounds down, here its gonna be 12
+         Math.ceil(12.4);//?Rounds up. we will have 13
+
+         //FIXME: RANDOM NUMBERS
+         //?First we need to create an instance of the random number(After importing the random class)
+         Random random = new Random();
+         int r = random.nextInt(10); //?Here we are creating an instance of the random number. The parameter passed is the upper bound.
+         double s = random.nextDouble(10.0);//?Random double
+         Boolean t = random.nextBoolean();//?a random boolean value
+
+         System.out.println(r + "\n" + s + "\n" + t);
+
 
 
         System.out.println("\n");
