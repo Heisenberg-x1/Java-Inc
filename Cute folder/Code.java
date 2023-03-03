@@ -1,4 +1,5 @@
 import java.util.Arrays; //!Array methods
+import java.util.List; //!Work with lists
 import java.util.Scanner;
 import javax.swing.JOptionPane; 
 import java.util.Random; //!Enables us to access the random numbers
@@ -141,9 +142,66 @@ public class Code {
                 break;
          }
           */
+         //FIXME: INVERTED TRIANGLE FIGURE
+         /*
+          int lim = 5;
+         for(int j=0;j<5;j++){
+            if(lim==0){
+                break;
+            }
+            for(int k=0;k<lim;k++){
+                System.out.print(("*"));
+
+            }
+            lim--;
+            System.out.print("\n");
+         }
+
+          */
+
+        // System.out.println("\n");
+
+        //FIXME: ARRAYS
+        int[] numbers = {12,5,34,54,67,7};
+        //*You cannot access an element that  is out of the bounds of the array.  */
+        //!We can also create an array by specifying the size before the add the elements later
+        String[] colors = new String[4];
+        colors[0] ="red"; 
+        colors[1] ="green"; 
+        colors[2] ="yellow"; 
+        colors[3] ="blue"; 
+        System.out.println(colors[3]);
+        //TODO: 2D ARRAYS
+        int[][] two = new int[3][2];
+        for(int l=0;l<3;l++){
+            for(int m=0;m<2;m++){
+                
+                Random ran = new Random();
+                int q = ran.nextInt(10);
+                
+                two[l][m] = q;
+            }
+        }
+        int[][] two2 = two;
+        for(int l=0;l<3;l++){
+            for(int m=0;m<2;m++){
+                System.out.print(two[l][m] + " ");
+            }
+            System.out.println();
+
+        }
+
+        //TODO: ARRAY METHODS
+        System.out.println(Arrays.equals(colors, two)); //?Compare if two arrays are equal
+        System.out.println(Arrays.deepEquals(two2, two)); //?Compare if two 2D arrays are equal
+        char[] arr3 = new char[5];
+        Arrays.fill(arr3,'x'); //? Fill an array with a specified element
+        System.out.println(Arrays.toString(arr3));
+        List<String> list = Arrays.asList(colors);
+        System.out.println(list.toString());
+        
 
 
 
-        System.out.println("\n");
     }
 }
