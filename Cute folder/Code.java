@@ -1,5 +1,6 @@
 import java.util.Arrays; //!Array methods
 import java.util.List; //!Work with lists
+import java.util.ArrayList; //!Working with ArrayList 
 import java.util.Scanner;
 import javax.swing.JOptionPane; 
 import java.util.Random; //!Enables us to access the random numbers
@@ -199,7 +200,33 @@ public class Code {
         System.out.println(Arrays.toString(arr3));
         List<String> list = Arrays.asList(colors);
         System.out.println(list.toString());
+
+        //TODO: ARRAYLISTS
+        //*We access the Array list functionality in the java.util.ArrayList library.ArrayLists have an upper hand against normal arrays in that they can resize dynamically when needed.To access the arraylists, we have to import the ArrayList library from java.util.
+        ArrayList<String> arrList1 = new ArrayList<String>();
         
+        //?Adding elements
+        arrList1.add("elem1");
+        arrList1.add("elem2");
+        arrList1.add("elem3");
+        //To insert at a specific position, do the following
+        arrList1.add(1,"Inserted element");
+
+        //?removing elements from the arrayList
+        arrList1.remove(0); //*The arguement passed is the index in which the element to be removed is located
+        System.out.println(arrList1.toString());
+        //?Check the size of the array List
+        System.out.println(arrList1.size()); 
+        //?Check if an ArrayList contains 
+        System.out.println(arrList1.contains("elem1")); 
+        //?Check if an arrayList is Empty - Returns a boolean
+        System.out.println(arrList1.isEmpty());
+        //?Get the index of a specific element 
+        System.out.println(arrList1.indexOf("elem3"));
+        //?Clear an ArrayList
+        arrList1.clear();
+        System.out.println(arrList1.isEmpty());
+
 
 
 
